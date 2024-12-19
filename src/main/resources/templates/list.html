@@ -21,7 +21,7 @@
         <div class="col-3"></div>
         <div class="col-6"> <!--카드방식으로 todo목록을 출력-->
             <div th:each="data:${list}"> <!--목록을 반복처리, list-->
-                <div class="card border-primary">
+                <div class="card border-primary mb-3">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-8"> <!--제목-->
@@ -34,7 +34,7 @@
                         <p th:text="${data.b}">내용</p>
                         <p>
                             <span class="badge rounded-pill bg-primary" th:text="${data.d}">중요도</span>
-                            <span class="badge rounded-pill bg-primary" th:text="${data.e}">상태</span>
+                            <span class="badge rounded-pill bg-secondary" th:text="${data.e}">상태</span>
                         </p>
                         <p><i class="bi-bell"></i><span th:text="${#temporals.format(data.c, 'yyyy-MM-dd')}">2024-11-12</span></p>
                     </div>
